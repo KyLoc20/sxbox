@@ -2,12 +2,18 @@
     "name": "react-sxbox",
     "version": "0.0.1",
     "description": "an inline-CSS-styles based unstyled component for React DOM",
-    "main": "index.js",
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
+        "test": "jest",
         "build": "tsc",
         "format": "prettier --write \"src/**/*.ts\"",
-        "eslint": "eslint . --ext .js,.jsx,.ts,.tsx"
+        "eslint": "eslint . --ext .js,.jsx,.ts,.tsx",
+        "prepare": "npm run build",
+        "prepublishOnly": "npm test && npm run lint",
+        "preversion": "npm run lint",
+        "version": "npm run format && git add -A src",
+        "postversion": "git push && git push --tags"
     },
     "repository": {
         "type": "git",
@@ -21,10 +27,17 @@
     },
     "homepage": "https://github.com/KyLoc20/sxbox#readme",
     "devDependencies": {
+        "@types/jest": "^27.4.0",
         "@typescript-eslint/eslint-plugin": "^5.9.0",
         "@typescript-eslint/parser": "^5.9.0",
         "eslint": "^8.6.0",
+        "jest": "^27.4.5",
         "prettier": "^2.5.1",
+        "ts-jest": "^27.1.2",
+        "ts-node": "^10.4.0",
         "typescript": "^4.5.4"
-    }
+    },
+    "files": [
+        "lib/**/*"
+    ]
 }
