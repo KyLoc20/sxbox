@@ -6,7 +6,7 @@ import {
   TouchEventHandler,
   UIEventHandler,
   WheelEventHandler,
-} from "react";
+} from 'react';
 export type { TDOMAttributes, TBasicAttributes };
 
 //TODO refer to interface DOMAttributes(@types/react)

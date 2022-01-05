@@ -1,6 +1,6 @@
 {
     "name": "react-sxbox",
-    "version": "0.0.2",
+    "version": "0.1.0",
     "description": "an inline-CSS-styles based unstyled component for React DOM",
     "main": "lib/index.js",
     "types": "lib/index.d.ts",
